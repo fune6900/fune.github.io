@@ -8,6 +8,13 @@ function App() {
 
   return (
     <div>
+      {/* Hero Section */}
+      <section className="py-16 text-center border-neon-b border-neon-green">
+        <img src="./src/assets/fune.png" 
+          alt="Riku Funagayama Icon"
+          className="mx-auto w-32 h-32 rounded-full mb-4 border-4 border-neon-pnk"
+        />
+      </section>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
