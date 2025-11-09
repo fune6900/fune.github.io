@@ -1,6 +1,8 @@
 import ScrollComponent from './ui-component/ScrollComponent/ScrollComponent';
 import {Helo} from './components/helo';
 import { Skill } from './components/skill';
+import {Works} from './components/works';
+import { Prof } from './components/prof';
 import './index.css';
 
 function App() {
@@ -9,7 +11,10 @@ function App() {
     <div className="dotgothic16">
       <ScrollComponent />
       <Helo />
+      <Prof />
       <Skill />
+      <Works />
+      <p className="text-center py-8">© Riku Funagayama, All Rights Reserved.</p>
     </div>
   )
 }
