@@ -14,8 +14,8 @@ import { BiLogoPostgresql } from "react-icons/bi";
 
 export const Skill = () => {
   return (
-    <section className="pt-16 py-32 text-center border-neon-b border-neon-green max-w-[1400px] mx-auto">
-      <div className="sticky flex items-center justify-between border-neon-b border-neon-green max-w-[1400px] mx-auto px-1 py-4">
+    <section className="pt-16 py-32 text-center border-neon-b border-neon-green mx-auto">
+      <div className="sticky flex items-center justify-between border-neon-b border-neon-green mx-auto px-1 py-4">
         <h2 className="flex items-center justify-center gap-2 text-2xl font-bold tracking-wider uppercase italic neon-glow-soft ">
           SKILL
           <HiCpuChip className="text-3xl drop-shadow-[0_0_10px_rgba(16,255,110,0.8)]" />

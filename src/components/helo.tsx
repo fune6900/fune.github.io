@@ -4,7 +4,7 @@ import { FaChevronDown } from "react-icons/fa";
 
 export const Helo = () => {
   return (
-    <section className="flex flex-col items-center justify-center h-screen text-center bg-cyber-black border-neon-b border-neon-green max-w-[1400px] mx-auto">
+    <section className="flex flex-col items-center justify-center h-screen text-center bg-cyber-black border-neon-b border-neon-green mx-auto">
       <img
         src={fune}
         alt="Riku Funagayama Icon"

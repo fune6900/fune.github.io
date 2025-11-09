@@ -4,7 +4,7 @@ import profile from "../assets/fune's_prpfile.png";
 
 export const Works = () => {
   return (
-    <section className="py-16 text-center border-neon-b border-neon-green border-neon-green max-w-[1400px] mx-auto">
+    <section className="py-16 text-center border-neon-b border-neon-green border-neon-green mx-auto">
       <h3 className="z-1 absolute -top-4 left-0 right-0 w-full text-2xl font-bold flex items-center justify-center">
           <span className="flex items-center justify-center gap-3 tracking-widest text-neon-green uppercase italic w-fit font-bold px-5 py-1 border-neon rounded-full bg-cyber-black neon-glow-soft">
             Works

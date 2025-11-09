@@ -3,7 +3,7 @@ import fune from "../assets/fune.png";
 
 export const Prof = () => {
   return (
-    <section className="py-16 text-center max-w-[1400px] mx-auto">
+    <section className="py-16 text-center mx-auto">
       {/* タイトル */}
       <div className="sticky flex items-center justify-between border-neon-b border-neon-green px-1 py-4">
         <h2 className="flex items-center justify-center gap-2 text-2xl font-bold tracking-wider uppercase italic neon-glow-soft">
