@@ -1,5 +1,4 @@
 import { RiUserStarFill } from "react-icons/ri";
-import animeguru from "../assets/animeguru.png";
 import fune from "../assets/fune.png";
 
 export const Prof = () => {
