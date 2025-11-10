@@ -1,5 +1,6 @@
 import { RiUserStarFill } from "react-icons/ri";
 import fune from "../assets/fune.png";
+import { motion } from "framer-motion";
 
 export const Prof = () => {
   return (
@@ -17,36 +18,38 @@ export const Prof = () => {
 
       {/* コンテンツ全体 */}
       <div className="flex flex-col items-center justify-center gap-16 mt-25">
-        {/* --- 上段（画像＋ステータス・趣味） --- */}
-        <div className="bg-cyber-black w-full max-w-[800px] p-6 border-neon border-neon-green rounded-lg transition-all duration-300">
-          <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
-            {/* 左：画像 */}
-            <div className="flex justify-center md:w-1/3 w-full">
-              <img
-                src={fune}
-                alt="プロフィール画像"
-                className="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover border-2 border-neon-green"
-              />
-            </div>
+        <motion.div initial={{ x: 48, y: 48, scale: 0 }} whileInView={{ x: 0, y: 0, scale: 1 }} transition={{ duration: 1, delay: 0.6, type: 'spring', bounce: 0.8 }} viewport={{ once: true, amount: 0.3 }}>
+          {/* --- 上段（画像＋ステータス・趣味） --- */}
+          <div className="bg-cyber-black w-full max-w-[800px] p-6 border-neon border-neon-green rounded-lg transition-all duration-300">
+            <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+              {/* 左：画像 */}
+              <div className="flex justify-center md:w-1/3 w-full">
+                <img
+                  src={fune}
+                  alt="プロフィール画像"
+                  className="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover border-2 border-neon-green"
+                />
+              </div>
 
-            {/* 右：ステータス・趣味 */}
-            <div className="md:w-2/3 w-full text-left mt-6 md:mt-0">
-              <h4 className="text-2xl font-bold text-neon-white">ステータス</h4>
-              <p className="mt-2 text-neon-white leading-relaxed">
-                2003年生まれ、宮崎県出身。<br />
-                現在は都内でエンジニアとして活動中。<br />
-                <br />
-                📧 riku.riku1019@icloud.com
-              </p>
+              {/* 右：ステータス・趣味 */}
+              <div className="md:w-2/3 w-full text-left mt-6 md:mt-0">
+                <h4 className="text-2xl font-bold text-neon-white">ステータス</h4>
+                <p className="mt-2 text-neon-white leading-relaxed">
+                  2003年生まれ、宮崎県出身。<br />
+                  現在は都内でエンジニアとして活動中。<br />
+                  <br />
+                  📧 riku.riku1019@icloud.com
+                </p>
 
-              <h4 className="mt-8 text-2xl font-bold text-neon-white">趣味</h4>
-              <p className="mt-2 text-neon-white leading-relaxed">
-                古着屋巡り、レコード集め、ガジェット、インテリア、<br />
-                ゲーム、アニメ、プログラミング、etc...
-              </p>
+                <h4 className="mt-8 text-2xl font-bold text-neon-white">趣味</h4>
+                <p className="mt-2 text-neon-white leading-relaxed">
+                  古着屋巡り、レコード集め、ガジェット、インテリア、<br />
+                  ゲーム、アニメ、プログラミング、etc...
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* --- 下段（経歴） --- */}
         <div className="bg-cyber-black w-full max-w-[800px] p-6 rounded-lg transition-all duration-300">
@@ -67,12 +70,16 @@ export const Prof = () => {
               { year: "2025年3月", text: "RUNTEQ 卒業!!" },
               { year: "2026年1月", text: "株式会社帆風（クレアテック）に入社" },
             ].map((item, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="border border-neon border-neon-green rounded-md p-3 text-neon-white text-left hover:bg-[#0a0a0a] transition-colors duration-300"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 4, type: "spring", bounce: 0.3 }}
+                viewport={{ once: true, amount: 0.3 }}
               >
                 <span className="font-bold">{item.year}：</span> {item.text}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
